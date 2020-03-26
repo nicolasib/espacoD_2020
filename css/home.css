@@ -1,0 +1,428 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  background-color: #fff;
+}
+
+.montarLook {
+  float: right !important;
+}
+
+.montarLook a {
+  color: #af972b !important;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  height: 50px;
+}
+
+.mainWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  height: 100px;
+}
+
+.header img {
+  max-height: 100%;
+}
+
+.header h1 {
+  margin: 0 20px;
+  font-weight: 300;
+}
+
+.menu {
+  width: 100%;
+  height: 50px;
+  background-color: #f5f5f5;
+  font-weight: bold;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+}
+
+.menu ul {
+  list-style-type: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li {
+  width: 150px;
+  float: left;
+  -webkit-transition: 100ms ease-in-out;
+  transition: 100ms ease-in-out;
+}
+
+.menu ul li a {
+  color: #222;
+}
+
+.menu ul li:hover a {
+  color: #af972b;
+  text-decoration: underline;
+}
+
+.menu ul li ul li {
+  background-color: #fff;
+  float: none;
+}
+
+.menu ul li ul li a {
+  color: #444;
+}
+
+.menu ul li ul li a:hover {
+  color: #ddd;
+}
+
+.menu a {
+  padding: 16px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.menu ul li ul li:hover {
+  background-color: #444;
+}
+
+.sliderMain {
+  height: 50vh;
+  margin: 1ch 0 0 0;
+  overflow: hidden;
+}
+
+.carouselMain {
+  position: relative;
+  width: 80vw;
+  max-height: 100%;
+  margin: 0 auto;
+}
+
+.singleItem {
+  width: 80vw;
+  overflow: hidden;
+}
+
+.singleItem img {
+  max-width: 100%;
+}
+
+.prevArrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #444;
+  padding: 1em;
+  cursor: pointer;
+  color: #fff;
+  z-index: 99;
+  font-weight: bolder;
+  -webkit-transition: ease-in-out 150ms;
+  transition: ease-in-out 150ms;
+}
+
+.prevArrow:hover {
+  background-color: #efd76b;
+  color: #444;
+}
+
+.nextArrow {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #444;
+  padding: 1em;
+  cursor: pointer;
+  color: #fff;
+  z-index: 99;
+  font-weight: bolder;
+  -webkit-transition: ease-in-out 150ms;
+  transition: ease-in-out 150ms;
+}
+
+.nextArrow:hover {
+  background-color: #efd76b;
+  color: #444;
+}
+
+.productsContent {
+  display: -ms-grid;
+  display: grid;
+  height: 80vh;
+  width: 80vw;
+  margin: 1ch auto;
+}
+
+.gridProducts {
+      grid-template-areas: "blusas moletons"  "blusas shorts";
+  -ms-grid-rows: 2fr 2fr;
+      grid-template-rows: 2fr 2fr;
+  grid-column-gap: 4px;
+  grid-row-gap: 4px;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  overflow: hidden;
+}
+
+.blusas {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: blusas;
+  position: relative;
+}
+
+.blusas img {
+  max-width: 100%;
+}
+
+.moletons {
+  position: relative;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: moletons;
+}
+
+.moletons img {
+  max-width: 100%;
+}
+
+.shorts {
+  position: relative;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: shorts;
+}
+
+.shorts img {
+  max-width: 100%;
+}
+
+.blusasContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.blusasContent h1 {
+  z-index: 100;
+  margin: 0;
+  color: #fff;
+  font-size: 40px;
+}
+
+.blusasContent .gotoBlusas {
+  z-index: 100;
+  color: #fff;
+  padding: 1ch 2ch;
+  margin: 1ch 0;
+  cursor: pointer;
+  border: solid 3px #fff;
+  font-weight: bold;
+  -webkit-transition: ease-in-out 150ms;
+  transition: ease-in-out 150ms;
+}
+
+.blusasContent .gotoBlusas a {
+  text-decoration: none;
+  color: #ddd;
+}
+
+.blusasContent .gotoBlusas:hover {
+  background-color: #fff;
+}
+
+.blusasContent .gotoBlusas:hover a {
+  color: #333;
+}
+
+.backgroundBlusas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../imgs/home/blusas.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-transition: ease-in-out 200ms;
+  transition: ease-in-out 200ms;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+
+.moletonsContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.moletonsContent h1 {
+  z-index: 100;
+  margin: 0;
+  color: #fff;
+  font-size: 40px;
+}
+
+.moletonsContent .gotoMoletons {
+  z-index: 100;
+  color: #fff;
+  padding: 1ch 2ch;
+  margin: 1ch 0;
+  cursor: pointer;
+  border: solid 3px #fff;
+  font-weight: bold;
+  -webkit-transition: ease-in-out 150ms;
+  transition: ease-in-out 150ms;
+}
+
+.moletonsContent .gotoMoletons a {
+  text-decoration: none;
+  color: #ddd;
+}
+
+.moletonsContent .gotoMoletons:hover {
+  background-color: #fff;
+}
+
+.moletonsContent .gotoMoletons:hover a {
+  color: #333;
+}
+
+.backgroundMoletons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../imgs/home/moletons.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-transition: ease-in-out 200ms;
+  transition: ease-in-out 200ms;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+
+.shortsContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.shortsContent h1 {
+  z-index: 100;
+  margin: 0;
+  color: #fff;
+  font-size: 40px;
+}
+
+.shortsContent .gotoShorts {
+  z-index: 100;
+  color: #fff;
+  padding: 1ch 2ch;
+  margin: 1ch 0;
+  cursor: pointer;
+  border: solid 3px #fff;
+  font-weight: bold;
+  -webkit-transition: ease-in-out 150ms;
+  transition: ease-in-out 150ms;
+}
+
+.shortsContent .gotoShorts a {
+  text-decoration: none;
+  color: #ddd;
+}
+
+.shortsContent .gotoShorts:hover {
+  background-color: #fff;
+}
+
+.shortsContent .gotoShorts:hover a {
+  color: #333;
+}
+
+.backgroundShorts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../imgs/home/shorts.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-transition: ease-in-out 200ms;
+  transition: ease-in-out 200ms;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+/*# sourceMappingURL=home.css.map */

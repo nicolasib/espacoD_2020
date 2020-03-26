@@ -1,0 +1,688 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic");
+
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    font-family: 'Oswald';
+    background-color: #ddd;
+    position: relative;
+}
+
+
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.filter-cima{
+    position: absolute;
+    z-index: 99;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.filter-baixo{
+    position: absolute;
+    z-index: 99;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+    transition: ease-in-out;
+    transition-duration: 200ms;
+}
+
+.backgroundmodal{
+    width: 100%;
+    height: 100%;
+    background-color: #00000070;
+}
+
+.categorias-modal-cima{
+    width: 100%;
+    height: 100%;
+    background-color: #00000070;
+    position: absolute;
+    z-index: 109;
+
+    .card-modal{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        width: 60%;
+        height: 60%;
+        background-color: #fff;
+        z-index: 101;
+        padding: 30px;
+    
+        border-radius: 4px;
+    
+        box-shadow: 0 10px 20px #00000050;
+    
+        .confirm-modal-categorias-cima{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            bottom: 15px;
+            right: 0px;
+            cursor: pointer;
+            background-color: #CFC34F;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: normal;
+        }
+        .cancel-modal-categorias-cima{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            bottom: 15px;
+            right: 80px;
+            cursor: pointer;
+            background-color: #888;
+            font-weight: normal;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+    
+    
+        h1{
+            margin: 0 0 20px 0;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            color: #333;
+        }
+        label{
+            font-family: 'Raleway' !important;
+            font-weight: 500;
+            font-size: 18px;
+            margin: 0 0 10px 0;
+        }
+    }
+}
+
+
+.marca-modal-cima{
+    width: 100%;
+    height: 100%;
+    background-color: #00000070;
+    position: absolute;
+    z-index: 109;
+
+    .card-modal{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        width: 60%;
+        height: 60%;
+        background-color: #fff;
+        z-index: 101;
+        padding: 30px;
+    
+        border-radius: 4px;
+    
+        box-shadow: 0 10px 20px #00000050;
+    
+        .confirm-modal-marca-cima{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            bottom: 15px;
+            right: 0px;
+            cursor: pointer;
+            background-color: #CFC34F;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: normal;
+        }
+        .cancel-modal-marca-cima{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            bottom: 15px;
+            right: 80px;
+            cursor: pointer;
+            background-color: #888;
+            font-weight: normal;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+    
+    
+        h1{
+            margin: 0 0 20px 0;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 60%;
+            width: 100%;
+            color: #333;
+        }
+        label{
+            font-family: 'Raleway' !important;
+            font-weight: 500;
+            font-size: 18px;
+            margin: 0 0 10px 0;
+        }
+    }
+}
+
+.marca-modal-baixo{
+    width: 100%;
+    height: 100%;
+    background-color: #00000070;
+    position: absolute;
+    z-index: 109;
+
+    .card-modal{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        width: 60%;
+        height: 60%;
+        background-color: #fff;
+        z-index: 101;
+        padding: 30px;
+    
+        border-radius: 4px;
+    
+        box-shadow: 0 10px 20px #00000050;
+    
+        .confirm-modal-marca-baixo{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            bottom: 15px;
+            right: 0px;
+            cursor: pointer;
+            background-color: #CFC34F;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: normal;
+        }
+        .cancel-modal-marca-baixo{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            bottom: 15px;
+            right: 80px;
+            cursor: pointer;
+            background-color: #888;
+            font-weight: normal;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+    
+    
+        h1{
+            margin: 0 0 20px 0;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 60%;
+            width: 100%;
+            color: #333;
+        }
+        label{
+            font-family: 'Raleway' !important;
+            font-weight: 500;
+            font-size: 18px;
+            margin: 0 0 10px 0;
+        }
+    }
+}
+
+.tamanho-modal-cima{
+    width: 100%;
+    height: 100%;
+    background-color: #00000070;
+    position: absolute;
+    z-index: 109;
+
+    .card-modal{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        width: 60%;
+        height: 60%;
+        background-color: #fff;
+        z-index: 101;
+        padding: 30px;
+    
+        border-radius: 4px;
+    
+        box-shadow: 0 10px 20px #00000050;
+    
+        .confirm-modal-tam-cima{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            bottom: 15px;
+            right: 0px;
+            cursor: pointer;
+            background-color: #CFC34F;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: normal;
+        }
+        .cancel-modal-tam-cima{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            bottom: 15px;
+            right: 80px;
+            cursor: pointer;
+            background-color: #888;
+            font-weight: normal;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+    
+    
+        h1{
+            margin: 0 0 20px 0;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            color: #333;
+        }
+        label{
+            font-family: 'Raleway' !important;
+            font-weight: 500;
+            font-size: 18px;
+            margin: 0 0 10px 0;
+        }
+    }
+}
+
+.tamanho-modal-baixo{
+    width: 100%;
+    height: 100%;
+    background-color: #00000070;
+    position: absolute;
+    z-index: 109;
+
+    .card-modal{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        width: 60%;
+        height: 60%;
+        background-color: #fff;
+        z-index: 101;
+        padding: 30px;
+    
+        border-radius: 4px;
+    
+        box-shadow: 0 10px 20px #00000050;
+    
+        .confirm-modal-tam-baixo{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            bottom: 15px;
+            right: 0px;
+            cursor: pointer;
+            background-color: #CFC34F;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: normal;
+        }
+        .cancel-modal-tam-baixo{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            bottom: 15px;
+            right: 80px;
+            cursor: pointer;
+            background-color: #888;
+            font-weight: normal;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+    
+    
+        h1{
+            margin: 0 0 20px 0;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            color: #333;
+        }
+        label{
+            font-family: 'Raleway' !important;
+            font-weight: 500;
+            font-size: 18px;
+            margin: 0 0 10px 0;
+        }
+    }
+}
+
+.categorias-modal-baixo{
+    width: 100%;
+    height: 100%;
+    background-color: #00000070;
+    position: absolute;
+    z-index: 109;
+
+    .card-modal{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        width: 60%;
+        height: 60%;
+        background-color: #fff;
+        z-index: 101;
+        padding: 30px;
+    
+        border-radius: 4px;
+    
+        box-shadow: 0 10px 20px #00000050;
+    
+        .confirm-modal-categorias-baixo{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            bottom: 15px;
+            right: 0px;
+            cursor: pointer;
+            background-color: #CFC34F;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: normal;
+        }
+        .cancel-modal-categorias-baixo{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            bottom: 15px;
+            right: 80px;
+            cursor: pointer;
+            background-color: #888;
+            font-weight: normal;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+    
+    
+        h1{
+            margin: 0 0 20px 0;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            color: #333;
+        }
+        label{
+            font-family: 'Raleway' !important;
+            font-weight: 500;
+            font-size: 18px;
+            margin: 0 0 10px 0;
+        }
+    }
+}
+
+
+
+.dropdown-filter-cima{
+    position: absolute;
+    z-index: 100;
+    top: 40px;
+    left: 15px;
+    .item:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .arrow{
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid #CFC34F;
+    }
+    ul{
+        border-radius: 4px;
+        border-top-left-radius: 0;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        padding: 10px 15px;
+        background-color: #CFC34F;
+        font-family: 'Montserrat';
+        li{
+            margin: 8px 0;
+        }
+    }
+}
+
+.dropdown-filter-baixo{
+    position: absolute;
+    z-index: 100;
+    top: 40px;
+    left: 15px;
+    .item:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .arrow{
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid #CFC34F;
+    }
+    ul{
+        border-radius: 4px;
+        border-top-left-radius: 0;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        padding: 10px 15px;
+        background-color: #CFC34F;
+        font-family: 'Montserrat';
+        li{
+            margin: 8px 0;
+        }
+    }
+}
+
+.image-content{
+    position: relative;
+}
+
+.logo{
+    height: 50px;
+}
+
+img{
+    height: 100%;
+}
+section.conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 1ch 0;
+}
+
+h1{
+    font-weight: normal;
+    font-size: 30px;
+    margin: 0;
+    color: #555;
+}
+h2{
+    font-weight: normal;
+    color: #555;
+}
+
+.desc{
+    font-family: 'Raleway';
+}
+
+.dados{
+    display: flex;
+    width: 80vw;
+}
+
+.filtro-cores{
+    display: flex;
+    align-items: center;
+    width: 120px;
+    height: 20px;
+    justify-content: space-around;
+}
+.colorFilterShow{
+    display: flex;
+}
+
+.cores{
+    width: 14px;
+    height: 14px;
+}
+.amarelo{
+    background-color: gold;
+}
+.preto{
+    background-color: #000;
+}
+.marrom{
+    background-color: burlywood; 
+}
+.rosa{
+    background-color: pink;
+}
+.verde{
+    background-color: green;
+}
+.vermelho{
+    background-color: red;
+}
+
+.contentholder-cima{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0 2em;
+    margin: 0 0 0 1ch;
+    background-color: #fff;
+}
+.contentholder-baixo{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 2em;
+    margin: 0 0 0 1ch;
+    background-color: #fff;
+}
+
+
+.image-content{
+    display: flex;
+    position: relative;
+}
+
+.imagem-cima{
+    height: 300px;
+    display: block;
+}
+.imagem-baixo{
+    height: 300px;
+    display: block;
+}
+
+.imageholder{
+    height: 300px;
+    width: 300px;
+}
+
+
+h2.marca-tipo{
+    margin: 0;
+}
+h2.preco{
+    margin: 0;
+}
+
+button.next-cima{
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0 20px;
+    background-color: #00000000;
+    position: absolute;
+    bottom: 50%;
+    height: 50%;
+    transform: translateY(50%);
+    right: 0;
+    z-index: 99;
+}
+button.prev-cima{
+    position: absolute;
+    z-index: 99;
+    bottom: 50%;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0 20px;
+    height: 50%;
+    transform: translateY(50%);
+    background-color: #00000000;
+}
+
+button.next-baixo{
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0 20px;
+    background-color: #00000000;
+    position: absolute;
+    bottom: 50%;
+    height: 50%;
+    transform: translateY(50%);
+    right: 0;
+    z-index: 99;
+}
+button.prev-baixo{
+    position: absolute;
+    z-index: 99;
+    bottom: 50%;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0 20px;
+    height: 50%;
+    transform: translateY(50%);
+    background-color: #00000000;
+}
+
+.looksProntos{
+    padding: 8px 13px;
+    background-color: goldenrod;
+    color: #fff;
+    font-family: 'Raleway';
+    cursor: pointer;
+}

@@ -1,0 +1,269 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  background-color: #fff;
+}
+a{
+    text-decoration: none;
+}
+
+h1 a{
+    color: #000;
+}
+
+.hidden{
+  display: none;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li{
+    label{
+      margin: 0 20px;
+      input{
+        margin: 0 10px 0 0 ;
+      }
+      cursor: pointer;
+    }
+  }
+}
+
+.categoriaTrigger{
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 0 0 10px 0;
+  border-bottom: 1px solid #f5f5f5;
+  width: min-content;  
+}
+
+.tamanhoTrigger{
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 0 0 10px 0;
+  border-bottom: 1px solid #f5f5f5;
+  width: min-content;  
+}
+
+.marcaTrigger{
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 0 0 10px 0;
+  border-bottom: 1px solid #f5f5f5;
+  width: min-content;  
+}
+
+.colorTrigger{
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 0 0 10px 0;
+  border-bottom: 1px solid #f5f5f5;
+  width: min-content;  
+}
+
+.montarLook{
+    a{
+      color: #af972b !important;
+    }
+    float: right !important;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    height: 50px;
+  }
+  
+  .mainWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100px;
+    a{
+        height: 100%;
+    }
+    
+    img{
+        max-height: 100%;
+    }
+    h1{
+      margin: 0 20px;
+      font-weight: 300;
+    }
+  }
+  
+  .menu {
+    width: 100%;
+    height: 50px;
+    background-color: #f5f5f5;
+    font-weight: bold;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    ul {
+      list-style-type: none;
+      position: relative;
+      margin: 0;
+      padding: 0;
+    }
+    ul li {
+      width: 150px;
+      float: left;
+      transition: 100ms ease-in-out;
+      a {
+        color: #222;
+      }
+    }
+    ul li:hover{
+      a{
+        color: #af972b;
+        text-decoration: underline;
+      }
+    }
+  
+    ul li ul li {
+      background-color: #fff;
+      float: none;
+      
+      a {
+        color: #444;
+      }
+      a:hover {
+        color: #ddd;
+      }
+    }
+    a {
+      padding: 16px;
+      display: block;
+      text-decoration: none;
+      text-align: center;
+    }
+    ul li ul li:hover {
+      background-color: #444;
+    }
+  }
+
+.explicandoParte{
+    width: 80%;
+    margin: 1em auto 0 auto;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1{
+        margin: 0;
+        font-size: 30px;
+    }
+}
+
+
+.products{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1em;
+    .filtroLateral{
+        width: 30%;
+    }
+    .showProducts{
+        width: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+}
+
+.productCard{
+    width: 14em;
+    height: min-content;
+    margin: 0 1em 1em 0;
+    padding: 1em;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px #00000020;
+    transition: ease-in-out 100ms;
+    justify-content: space-between;
+    cursor: pointer;
+    &:hover{
+        box-shadow: 4px 4px 6px #00000030;
+    }
+    &:hover .productTipoMarca{
+        text-decoration: underline;
+    }
+    img{
+        max-width: 100%;
+    }
+    display: flex;
+    flex-direction: column;
+
+    .productTipoMarca{
+        font-size: 18px;
+    }
+
+    .productPreco{
+        font-size: 18px;
+        font-weight: normal;
+    }
+}
+
+.colorList{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100px;
+}
+
+.colorSphere{
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  margin: 2px;
+}
+.yellow{
+  background-color: #f4dc42;
+}
+.black{
+  background-color: black;
+}
+.white{
+  border: 1px solid black;
+}
+.blue{
+  background-color: #2fa3fc;
+}
+.green{
+  background-color: #31b238;
+}
+.red{
+  background-color: red;
+}
+.brown{
+  background-color: #826655;
+}
+.pink{
+  background-color: #ffc6ec;
+}
+.gray{
+  background-color: #888;
+}
+
+.tamanhoList{
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 15px;
+}

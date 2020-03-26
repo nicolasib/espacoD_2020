@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario input</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <main class="pagina">
+        <form method="POST" action="insertForm.php" class="input-bd" enctype="multipart/form-data">
+            <div class="main">
+                <div class="pecas">
+                    <h1>Informações gerais:</h1>
+    
+                    <div class="inputMarca">
+                        <label>Marca: <input type="text" name="marca" required></label>
+                    </div>
+    
+                    <div class="inputTipo">
+                        <label>Tipo: 
+                            <select name="tipo" required>
+                                <optgroup label="Parte de cima">
+                                    <option value="camisa">Camisa</option>
+                                    <option value="cropped">Cropped</option>
+                                    <option value="top">Top</option>
+                                    <option value="moletom">Moletom</option>
+                                </optgroup>
+                                <optgroup label="Parte de baixo">
+                                    <option value="calca">Calça</option>
+                                    <option value="bermuda">Bermuda</option>
+                                    <option value="short">Short</option>
+                                    <option value="saia">Saia</option>
+                                </optgroup>
+                                <optgroup label="Corpo inteiro">
+                                    <option value="macacao">Macacão</option>
+                                    <option value="vestido">Vestido</option>
+                                </optgroup>
+                            </select>
+                        </label>
+                    </div>
+    
+                    <div class="inputPreco">
+                        <label>Preço: <input type="number" name="preco" step="0.01" required></label>
+                    </div>
+                    <div class="inputDesc">
+                        <label>Descrição: <textarea type="text" name="descricao"></textarea></label>
+                    </div>
+                </div>
+    
+                <div class="tamanhoCores">
+                    <h1>Selecione as cores</h1>
+                    <div class="chkCores">
+                        <div class="chk" id="chkBranco">Branco</div>
+                        <div class="chk" id="chkPreto">Preto</div>
+                        <div class="chk" id="chkAmarelo">Amarelo</div>
+                        <div class="chk" id="chkAzul">Azul</div>
+                        <div class="chk" id="chkVerde">Verde</div>
+                        <div class="chk" id="chkVermelho">Vermelho</div>
+                    </div>
+    
+                    <div class="colorContainer Preto">
+                        <h1>Quantidade dos tamanhos (Preto):</h1>
+                        <label>PP: <input type="number" value="0" name="Preto_qnt_PP" required></label>
+                        <label>P: <input type="number" value="0" name="Preto_qnt_P" required></label>
+                        <label>M: <input type="number" value="0" name="Preto_qnt_M" required></label>
+                        <label>G: <input type="number" value="0" name="Preto_qnt_G" required></label>
+                        <label>GG: <input type="number" value="0" name="Preto_qnt_GG" required></label>
+                        <div class="imgContainer imgPreto">
+                            <h1>Envie imagens:</h1>
+                            <label>Imagem frente: <input type="file" name="Img_frente_preto" ></label>
+                            <label>Imagem tras: <input type="file" name="Img_tras_preto" ></label>
+                        </div>
+                        <div class="close" id="closePreto">Fechar</div>
+                    </div>
+                    
+                    <div class="colorContainer Branco">
+                        <h1>Quantidade dos tamanhos (Branco):</h1>
+                        <label>PP: <input type="number" value="0" name="Branco_qnt_PP" required></label>
+                        <label>P: <input type="number" value="0" name="Branco_qnt_P" required></label>
+                        <label>M: <input type="number" value="0" name="Branco_qnt_M" required></label>
+                        <label>G: <input type="number" value="0" name="Branco_qnt_G" required></label>
+                        <label>GG: <input type="number" value="0" name="Branco_qnt_GG" required></label>
+                        <div class="imgContainer imgBranco">
+                            <h1>Envie imagens:</h1>
+                            <label>Imagem frente: <input type="file" name="Img_frente_branco" ></label>
+                            <label>Imagem tras: <input type="file" name="Img_tras_branco" ></label>
+                        </div>
+                        <div class="close" id="closeBranco">Fechar</div>
+                    </div>
+                    
+                    <div class="colorContainer Amarelo">
+                        <h1>Quantidade dos tamanhos (Amarelo):</h1>
+                        <label>PP: <input type="number" value="0" name="Amarelo_qnt_PP" required></label>
+                        <label>P: <input type="number" value="0" name="Amarelo_qnt_P" required></label>
+                        <label>M: <input type="number" value="0" name="Amarelo_qnt_M" required></label>
+                        <label>G: <input type="number" value="0" name="Amarelo_qnt_G" required></label>
+                        <label>GG: <input type="number" value="0" name="Amarelo_qnt_GG" required></label>
+                        <div class="imgContainer imgAmarelo">
+                            <h1>Envie imagens:</h1>
+                            <label>Imagem frente: <input type="file" name="Img_frente_amarelo" ></label>
+                            <label>Imagem tras: <input type="file" name="Img_tras_amarelo" ></label>
+                        </div>
+                        <div class="close" id="closeAmarelo">Fechar</div>
+                    </div>
+                    
+                    <div class="colorContainer Azul">
+                        <h1>Quantidade dos tamanhos (Azul):</h1>
+                        <label>PP: <input type="number" value="0" name="Azul_qnt_PP" required></label>
+                        <label>P: <input type="number" value="0" name="Azul_qnt_P" required></label>
+                        <label>M: <input type="number" value="0" name="Azul_qnt_M" required></label>
+                        <label>G: <input type="number" value="0" name="Azul_qnt_G" required></label>
+                        <label>GG: <input type="number" value="0" name="Azul_qnt_GG" required></label>
+                        <div class="imgContainer imgAzul">
+                            <h1>Envie imagens:</h1>
+                            <label>Imagem frente: <input type="file" name="Img_frente_azul" ></label>
+                            <label>Imagem tras: <input type="file" name="Img_tras_azul" ></label>
+                        </div>
+                        <div class="close" id="closeAzul">Fechar</div>
+                    </div>
+                    
+                    <div class="colorContainer Verde">
+                        <h1>Quantidade dos tamanhos (Verde):</h1>
+                        <label>PP: <input type="number" value="0" name="Verde_qnt_PP" required></label>
+                        <label>P: <input type="number" value="0" name="Verde_qnt_P" required></label>
+                        <label>M: <input type="number" value="0" name="Verde_qnt_M" required></label>
+                        <label>G: <input type="number" value="0" name="Verde_qnt_G" required></label>
+                        <label>GG: <input type="number" value="0" name="Verde_qnt_GG" required></label>
+                        <div class="imgContainer imgPreto">
+                            <h1>Envie imagens:</h1>
+                            <label>Imagem frente: <input type="file" name="Img_frente_verde" ></label>
+                            <label>Imagem tras: <input type="file" name="Img_tras_verde" ></label>
+                        </div>
+                        <div class="close" id="closeVerde">Fechar</div>
+                    </div>
+                    
+                    <div class="colorContainer Vermelho">
+                        <h1>Quantidade dos tamanhos (Vermelho):</h1>
+                        <label>PP: <input type="number" value="0" name="Vermelho_qnt_PP" required></label>
+                        <label>P: <input type="number" value="0" name="Vermelho_qnt_P" required></label>
+                        <label>M: <input type="number" value="0" name="Vermelho_qnt_M" required></label>
+                        <label>G: <input type="number" value="0" name="Vermelho_qnt_G" required></label>
+                        <label>GG: <input type="number" value="0" name="Vermelho_qnt_GG" required></label>
+                        <div class="imgContainer imgVermelho">
+                            <h1>Envie imagens:</h1>
+                            <label>Imagem frente: <input type="file" name="Img_frente_vermelho" ></label>
+                            <label>Imagem tras: <input type="file" name="Img_tras_vermelho" ></label>
+                        </div>
+                        <div class="close" id="closeVermelho">Fechar</div>
+                    </div>
+                </div>
+                
+    
+                <button class="subButton" type="submit">Cadastrar</button>
+            </div>
+        </form>
+        <div><a href="./php/consultaProdutos.php">Ver produtos cadastrados</a></div>
+    </main>
+    
+    
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,900&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin: 0;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pecas {
+  width: auto;
+  padding: 1em;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 2px solid #3ea2ff;
+}
+
+.pecas h1 {
+  margin: 0 0 1em 0;
+}
+
+.pecas input {
+  width: 100%;
+  margin: 0 0 1em 0;
+  border: 1px solid lightgrey;
+  padding: 1ch;
+}
+
+.pecas input:focus {
+  -webkit-box-shadow: 0 0 3px #3ea2ff;
+          box-shadow: 0 0 3px #3ea2ff;
+}
+
+.pecas select {
+  width: 100%;
+  border: 1px solid lightgrey;
+  font-weight: bold;
+  padding: 1ch;
+  margin: 0 0 1em 0;
+}
+
+.pecas select:focus {
+  -webkit-box-shadow: 0 0 3px #3ea2ff;
+          box-shadow: 0 0 3px #3ea2ff;
+}
+
+.pecas textarea {
+  width: 100%;
+  border: 1px solid lightgrey;
+  padding: 1ch;
+}
+
+.pecas textarea:focus {
+  -webkit-box-shadow: 0 0 3px #3ea2ff;
+          box-shadow: 0 0 3px #3ea2ff;
+}
+
+.tamanhoCores {
+  width: auto;
+  max-height: 50vh;
+  overflow-y: scroll;
+  padding: 1em;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 2px solid #3ea2ff;
+}
+
+.tamanhoCores h1 {
+  margin: 0 0 1em 0;
+}
+
+.subButton {
+  border: none;
+  padding: 1ch;
+  font-size: 2ch;
+  color: #000;
+  border: 2px solid #3ea2ff;
+  background-color: #3ea2ff;
+  cursor: pointer;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+}
+
+.subButton:hover {
+  background-color: #fff;
+  border: 2px solid #3ea2ff;
+  color: #3ea2ff;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+}
+
+div.cores {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.chk {
+  margin: 0 1em 0 0;
+}
+
+div.chkCores {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60vw;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.colorContainer {
+  margin: 0 0 1em 0;
+}
+
+.colorContainer h1 {
+  font-size: 2ch;
+  margin: 1ch 0;
+}
+
+.colorContainer .close {
+  font-weight: bold;
+  color: #fff;
+  background-color: red;
+  padding: 1ch;
+  font-size: 1.2ch;
+  margin: 1ch 0;
+  display: inline-block;
+}
+
+.colorContainer .imgContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+div#chkPreto {
+  cursor: pointer;
+}
+
+div#closePreto {
+  cursor: pointer;
+}
+
+div#chkBranco {
+  cursor: pointer;
+}
+
+div#closeBranco {
+  cursor: pointer;
+}
+
+div#chkAmarelo {
+  cursor: pointer;
+}
+
+div#closeAmarelo {
+  cursor: pointer;
+}
+
+div#chkAzul {
+  cursor: pointer;
+}
+
+div#closeAzul {
+  cursor: pointer;
+}
+
+div#chkVerde {
+  cursor: pointer;
+}
+
+div#closeVerde {
+  cursor: pointer;
+}
+
+div#chkVermelho {
+  cursor: pointer;
+}
+
+div#closeVermelho {
+  cursor: pointer;
+}
+
+div.Preto {
+  display: none;
+}
+
+div.Branco {
+  display: none;
+}
+
+div.Amarelo {
+  display: none;
+}
+
+div.Azul {
+  display: none;
+}
+
+div.Verde {
+  display: none;
+}
+
+div.Vermelho {
+  display: none;
+}
+/*# sourceMappingURL=form.css.map */
