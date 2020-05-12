@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 19-Set-2019 às 02:04
+-- Tempo de geração: 12-Maio-2020 às 20:21
 -- Versão do servidor: 10.4.6-MariaDB
 -- versão do PHP: 7.3.9
 
@@ -74,7 +74,8 @@ INSERT INTO `cores` (`idCores`, `cor`) VALUES
 (5, 'verde'),
 (6, 'vermelho'),
 (7, 'marrom'),
-(8, 'rosa');
+(8, 'rosa'),
+(9, 'cinza');
 
 -- --------------------------------------------------------
 
@@ -103,6 +104,27 @@ CREATE TABLE `inverno` (
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `look`
+--
+
+CREATE TABLE `look` (
+  `idLook` int(50) NOT NULL,
+  `preco` varchar(50) COLLATE latin1_general_cs NOT NULL,
+  `srcImg` varchar(50) COLLATE latin1_general_cs NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
+
+--
+-- Extraindo dados da tabela `look`
+--
+
+INSERT INTO `look` (`idLook`, `preco`, `srcImg`) VALUES
+(1, '89.90', './imgs/looks/1.png'),
+(2, '69.90', './imgs/looks/2.png'),
+(3, '59.90', './imgs/looks/3.png');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `novidades`
 --
 
@@ -117,8 +139,12 @@ CREATE TABLE `novidades` (
 --
 
 INSERT INTO `novidades` (`idNov`, `idProdCima`, `idProdBaixo`) VALUES
-(1, 1, NULL),
-(2, 4, NULL);
+(4, 6, NULL),
+(6, 9, NULL),
+(7, NULL, 16),
+(8, NULL, 19),
+(9, NULL, 20),
+(10, NULL, 21);
 
 -- --------------------------------------------------------
 
@@ -153,7 +179,24 @@ INSERT INTO `pecas` (`idPecas`, `descricao`, `preco`, `tipo`, `posicao`, `marca`
 (11, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '89.90', 'Calça', 1, 'Patogê'),
 (12, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '49.90', 'Short', 1, 'Cheia de Graça'),
 (13, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '29.90', 'Saia', 1, 'Lia Bella'),
-(14, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '39.90', 'Saia', 1, 'Silvânia Mares');
+(14, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '39.90', 'Saia', 1, 'Silvânia Mares'),
+(15, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '35.90', 'Blusa', 0, 'Mandoras'),
+(16, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '39.90', 'Blusa', 0, 'Amaro'),
+(17, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '39.90', 'Blusa', 0, 'Renner'),
+(18, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '42.90', 'Blusa', 0, 'C&A'),
+(19, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '45.90', 'Blusa', 0, 'Enjoei'),
+(20, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '38.90', 'Blusa', 0, 'Posthaus'),
+(21, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '39.90', 'Blusa', 0, 'Marisa'),
+(22, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '42.90', 'Blusa', 0, 'Zattini'),
+(23, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '42.90', 'Blusa', 0, 'Código Giirls'),
+(24, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '41.90', 'Blusa', 0, 'Kanui'),
+(25, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '42.90', 'Blusa', 0, 'Dafiti'),
+(26, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '45.90', 'Saia', 1, 'Dafiti'),
+(27, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '43.90', 'Saia', 1, 'Zattini'),
+(28, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '42.90', 'Saia', 1, 'Loja Avenida'),
+(29, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '45.90', 'Saia', 1, 'Amaro'),
+(31, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '49.90', 'Calça', 1, 'Stratégia'),
+(32, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '49.90', 'Calça', 1, 'John John');
 
 -- --------------------------------------------------------
 
@@ -186,7 +229,17 @@ INSERT INTO `prodbaixo` (`id`, `idCor`, `idTam`, `idPeca`, `quantidade`, `srcImg
 (8, 2, 3, 13, 20, 'stringQualquer', './imgs/baixo/8.jpg'),
 (9, 8, 3, 14, 20, 'stringQualquer', './imgs/baixo/9.jpg'),
 (10, 8, 3, 12, 20, 'stringQualquer', './imgs/baixo/10.jpg'),
-(11, 4, 3, 11, 20, 'stringQualquer', './imgs/baixo/11.jpg');
+(11, 4, 3, 11, 20, 'stringQualquer', './imgs/baixo/11.jpg'),
+(12, 3, 2, 26, 20, 'stringQualquer', './imgs/baixo/12.jpg'),
+(13, 3, 4, 26, 20, 'stringQualquer', './imgs/baixo/12.jpg'),
+(14, 4, 3, 27, 20, 'stringQualquer', './imgs/baixo/13.jpg'),
+(15, 9, 4, 28, 20, 'stringQualquer', './imgs/baixo/14a.jpg'),
+(16, 2, 3, 29, 20, 'stringQualquer', './imgs/baixo/15.jpg'),
+(17, 2, 4, 29, 20, 'stringQualquer', './imgs/baixo/15.jpg'),
+(18, 2, 5, 29, 20, 'stringQualquer', './imgs/baixo/15.jpg'),
+(19, 4, 4, 31, 20, 'StringQualquer', './imgs/baixo/16.jpg'),
+(20, 4, 3, 32, 20, 'StringQualquer', './imgs/baixo/17.jpg'),
+(21, 4, 5, 32, 20, 'StringQualquer', './imgs/baixo/17.jpg');
 
 -- --------------------------------------------------------
 
@@ -213,7 +266,29 @@ INSERT INTO `prodcima` (`id`, `idCor`, `idTam`, `idPeca`, `quantidade`, `srcImgT
 (2, 5, 3, 6, 30, 'stringqualquer', './imgs/cima/6_5.jpg'),
 (3, 3, 3, 10, 20, 'stringQualquer', './imgs/cima/10_3.jpg'),
 (4, 1, 2, 1, 20, 'teste', './imgs/cima/1_1.jpg'),
-(5, 6, 2, 6, 20, 'teste', './imgs/cima/6_6.jpg');
+(5, 6, 2, 6, 20, 'teste', './imgs/cima/6_6.jpg'),
+(6, 3, 2, 15, 20, 'stringQualquer', './imgs/cima/15_3.jpg'),
+(7, 3, 3, 15, 20, 'stringQualquer', './imgs/cima/15_3.jpg'),
+(8, 8, 3, 16, 20, 'stringQualquer', './imgs/cima/16_8.jpg'),
+(9, 9, 2, 17, 20, 'stringQualquer', './imgs/cima/17_3.jpg'),
+(10, 9, 4, 17, 20, 'stringQualquer', './imgs/cima/17_3.jpg'),
+(11, 9, 2, 18, 20, 'stringQualquer', './imgs/cima/18_9.jpg'),
+(12, 9, 4, 19, 20, 'stringQualquer', './imgs/cima/19_9.jpg'),
+(13, 2, 2, 20, 20, 'stringQualquer', './imgs/cima/20_2.jpg'),
+(14, 2, 3, 20, 20, 'stringQualquer', './imgs/cima/20_2.jpg'),
+(15, 2, 4, 20, 20, 'stringQualquer', './imgs/cima/20_2.jpg'),
+(16, 3, 3, 21, 20, 'stringQualquer', './imgs/cima/21_3.jpg'),
+(17, 3, 4, 21, 20, 'stringQualquer', './imgs/cima/21_3.jpg'),
+(18, 2, 4, 22, 20, 'stringQualquer', './imgs/cima/22_2.jpg'),
+(19, 6, 4, 22, 20, 'stringQualquer', './imgs/cima/22_6.jpg'),
+(20, 4, 1, 23, 20, 'stringQualquer', './imgs/cima/23_4.jpg'),
+(21, 4, 3, 23, 20, 'stringQualquer', './imgs/cima/23_4.jpg'),
+(22, 2, 1, 23, 20, 'stringQualquer', './imgs/cima/23_2.jpg'),
+(23, 2, 3, 23, 20, 'stringQualquer', './imgs/cima/23_2.jpg'),
+(24, 3, 2, 24, 20, 'stringQualquer', './imgs/cima/24_3.jpg'),
+(25, 3, 3, 24, 20, 'stringQualquer', './imgs/cima/24_3.jpg'),
+(26, 3, 4, 25, 20, 'stringQualquer', './imgs/cima/25_4.jpg'),
+(27, 3, 5, 25, 20, 'stringQualquer', './imgs/cima/25_4.jpg');
 
 -- --------------------------------------------------------
 
@@ -295,6 +370,12 @@ ALTER TABLE `inverno`
   ADD KEY `fkProdBaixoInv` (`idProdBaixo`);
 
 --
+-- Índices para tabela `look`
+--
+ALTER TABLE `look`
+  ADD PRIMARY KEY (`idLook`);
+
+--
 -- Índices para tabela `novidades`
 --
 ALTER TABLE `novidades`
@@ -356,7 +437,7 @@ ALTER TABLE `verao`
 -- AUTO_INCREMENT de tabela `cores`
 --
 ALTER TABLE `cores`
-  MODIFY `idCores` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idCores` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de tabela `fitness`
@@ -371,28 +452,34 @@ ALTER TABLE `inverno`
   MODIFY `idInv` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT de tabela `look`
+--
+ALTER TABLE `look`
+  MODIFY `idLook` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT de tabela `novidades`
 --
 ALTER TABLE `novidades`
-  MODIFY `idNov` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idNov` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de tabela `pecas`
 --
 ALTER TABLE `pecas`
-  MODIFY `idPecas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `idPecas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT de tabela `prodbaixo`
 --
 ALTER TABLE `prodbaixo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de tabela `prodcima`
 --
 ALTER TABLE `prodcima`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT de tabela `sale`
